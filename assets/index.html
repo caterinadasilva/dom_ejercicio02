@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es_CL">
+<head>
+	<title>Mensaje por clase</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="CONTENT">
+	<meta name="author" content="Caterina Da Silva">
+</head>
+<body>
+	<h1 class="titulo">Esto es un título</h1>
+	<p class="mensaje">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, perspiciatis commodi excepturi numquam delectus natus aspernatur alias, at consequatur perferendis dignissimos omnis. <a href="#">Soy un enlace</a></p>
+	<img src="http://lorempixel.com/output/nature-q-c-301-301-3.jpg" alt="" class="mensaje">
+	<p id="parrafo">Culpa placeat cum enim inventore asperiores unde sit fugiat ea aliquam modi esse nostrum magni, eum, repellendus sint at aperiam hic dolorum!</p>
+	<span class="mensaje"></span>
+	<img src="http://lorempixel.com/output/city-q-c-301-301-9.jpg" alt="" class="mensaje">
+
+	<script>
+		// Contar los elementos que poseen la clase "mensaje"
+		var enlaces = document.getElementsByClassName('mensaje');
+		var cantidadEnlaces = enlaces.length;
+		// Crear una función que muestre un msg en pantalla:  Si sólo 1 elemento: "Es muy poco", si +2 pero -4: "No está mal", si 4 o +, "son muchos!"
+		function contadorEnlaces() {
+			if(cantidadEnlaces == 1) {
+				alert("Es muy poco");
+			} else if (cantidadEnlaces >= 2 && cantidadEnlaces < 4) {
+				alert("No está mal");
+			} else {
+				alert("Son muchos!");
+			}
+		}
+
+		contadorEnlaces(cantidadEnlaces);
+	</script>
+</body>
+</html>
